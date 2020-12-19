@@ -1,0 +1,22 @@
+.filter_container {
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  h4 {
+    text-align: center;
+    border-bottom: 1px solid gray;
+  }
+  margin: 15px;
+  .year_conatainer {
+    width: 250px;
+    mat-chip {
+      justify-content: center;
+      flex: 40%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<div>
+  <h3 class="title">SpaceX Launch Programs</h3>
+  <div class="container">
+    <div>
+      <app-filters (filterValuse)="applyFilter($event)"></app-filters>
+    </div>
+    <div class="launches">
+      <mat-spinner *ngIf="loading"></mat-spinner>
+      <ng-container *ngIf="!loading">
+        <div class="launch" *ngFor="let launch of launches">
+          <mat-card class="example-card">
+            <img
+              mat-card-image
+              src="{{ launch.links.mission_patch }}"
+              alt="{{ launch.links.article_link }}"
+              [width]="'200px'"
+              [height]="'200px'"
+            />
+            <mat-card-content>
+              <h3>{{ launch.mission_name }}</h3>
+              <div>
+                <span>Launch Year :</span>
+                <span [style.margin-left.px]="5">{{ launch.launch_year }}</span>
+              </div>
+              <div>
+                <span>Successfull Launch :</span>
+                <span [style.margin-left.px]="5">{{
+                  launch.launch_success
+                }}</span>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
