@@ -40,3 +40,13 @@
     }
   }
 }
+
+.no_data {
+  align-self: center;
+  top: 50%;
+  bottom: 50%;
+  position: fixed;
+  right: 37%;
+  font-size: 25px;
+  color: red;
+}
