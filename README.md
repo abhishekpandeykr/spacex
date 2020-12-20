@@ -22,6 +22,10 @@ Run `ng build --prod && ng run space-x:server:production` to create a Server Sid
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Coverage of Unit Test
+
+To see the covergae of unit test run `ng test --no-watch --code-coverage`.
+
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
