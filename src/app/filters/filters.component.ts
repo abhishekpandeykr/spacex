@@ -62,7 +62,18 @@ export class FiltersComponent implements OnInit {
   }
 
   private _setTODefault(items, $event) {
-    items && items.forEach((element) => (element.selectable = false));
+    this._reset(items);
     $event.selectable = true;
+  }
+
+  private _reset(items) {
+    items && items.forEach((element) => (element.selectable = false));
+  }
+
+  public resetFilter() {
+    [this.isSuccessLand, this.isSuccessFullLaunc, this.years].forEach((ele) =>
+      this._reset(ele)
+    );
+    this.filterValuse.emit(null);
   }
 }

@@ -36,9 +36,11 @@ export class AppComponent implements OnInit {
   }
 
   private _createFilter(filter) {
-    console.log(filter);
-    return Object.keys(filter)
-      .map((ele) => `${ele}=${filter[ele]}`)
-      .join('&');
+    return (
+      filter &&
+      Object.keys(filter)
+        .map((ele) => `${ele}=${filter[ele]}`)
+        .join('&')
+    );
   }
 }
